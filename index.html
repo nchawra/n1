@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../bootstrap/css/font-awesome-5.8.1.css">
+    <link rel="stylesheet" href="../../bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="../../bootstrap/css/mdb.css">
+    <link rel="stylesheet" href="../css/styles.css">
+    <title>UiBrains Dashboard</title>
+</head>
+<body >
+
+<!-- main navbar -->
+
+<div class="navbar navbar-expand-sm navbar-dark bg-dark">
+<div class="container">
+    <div class="navbar-brand"><a href="index.html" class="text-warning"><i class="fa fa-circle-notch"></i>Ui Brains</a></div>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#navb"><i class="navbar-toggler-icon"></i></button>
+    <div class="collapse navbar-collapse" id="navb">
+        <ul class="navbar-nav ">
+            <li class="nav-item active "><a href="index.html" class="text-muted nav-link" > <i class="fa fa-arrow-circle-up"></i> Dashboard </a></li>
+            <li class="nav-item "><a href="tasks.html" class="text-muted nav-link" > <i class="fa fa-arrow-circle-down"></i> Task </a></li>
+            <li class="nav-item "><a href="categories.html" class="text-muted nav-link" > <i class="fa fa-arrow-circle-right"></i> Categories </a></li>
+            <li class="nav-item "><a href="employees.html" class="text-muted nav-link" > <i class="fa fa-arrow-circle-left"></i> Employee </a></li>
+        </ul>
+
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item dropdown">
+                <a href="#" data-toggle="dropdown" class="nav-link"><i class="fa fa-address-book"></i> Naveen </a>
+                <div class="dropdown-menu">
+                    <a href="#" class="dropdown-item">profile</a>
+                    <a href="#" class="dropdown-item">setting</a>
+                </div>
+            </li>
+                <a href="#" class="nav-link"><i class="fa fa-sign-out-alt"></i>logout</a>
+
+        </ul>
+    </div>
+
+
+</div>
+</div>
+
+<!-- dashboard section -->
+<section class="bg-info p-2 font-weight-bold text-white" >
+    <div class="container">
+    <div class="row" >
+        <div class="col">
+            <i class="fa fa-chevron-circle-up"></i> <span >Dashboard</span>
+        </div>
+    </div>
+    </div>
+</section>
+
+<!-- modal section -->
+
+<section class="bg-light p-2">
+<div class="container">
+    <div class="row">
+        <div class="col-4">
+            <span class="btn btn-warning btn-block" data-toggle="modal" data-target="#task">Add Task</span>
+        </div>
+        <div class="col-4">
+            <span class="btn btn-success btn-block" data-toggle="modal" data-target="#category">Add Category</span>
+        </div>
+        <div class="col-4">
+            <span class="btn btn-danger btn-block" data-toggle="modal" data-target="#employee">Add Employee</span>
+        </div>
+    </div>
+</div>
+</section>
+
+
+<!-- task modal -->
+<div class="modal" id="task">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-warning">
+                <span>Add task</span>
+                <button class="close" data-dismiss="modal"><i class="fa fa-closed-captioning"></i></button>
+            </div>
+            <div class="modal-body">
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="title">
+                    </div>
+                    <div class="form-group">
+                        <label>Categories</label>
+                        <select class="form-control">
+                            <option>Development</option>
+                            <option>Enhancements</option>
+                            <option>Bug Fixing</option>
+                            <option>Maintenance</option>
+                            <option>Production Support</option>
+                            <option>Unit Testing</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <span>upload image</span>
+                        <input type="file" class="form-control">
+                        <small>max size 25mb</small>
+                    </div>
+                    <div class="form-group">
+                        <span>discription</span>
+                        <textarea class="form-control"></textarea>
+                    </div>
+                    <a href="#" class="btn btn-dark" data-dismiss="modal">Close</a>
+                    <input type="submit" value="Add Task" class="btn btn-primary">
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- category modal -->
+<div class="modal" id="category">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-light">
+                <span >Add Category</span>
+                <button class="close" data-dismiss="modal"><i class="fa fa-exclamation-circle"></i></button>
+            </div>
+            <div class="modal-body">
+                <form >
+                    <div class="form-group">
+                        <input type="text" placeholder="category name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="date" class="form-control">
+                    </div>
+                    <span class="btn btn-info" data-dismiss="modal">close</span>
+                    <span class="btn btn-danger">add category</span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- employee modal -->
+<div class="modal" id="employee">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header bg-danger">
+                <span >Add employee</span>
+                <button class="close" data-dismiss="modal"><i class="fa fa-exclamation-circle"></i></button>
+            </div>
+            <div class="modal-body">
+                <form >
+                    <div class="form-group">
+                        <input type="text" placeholder="employee  name" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="email" placeholder="employee email" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="password" placeholder="default password" class="form-control">
+                    </div>
+
+                    <span class="btn btn-info" data-dismiss="modal">close</span>
+                    <span class="btn btn-danger">add employee</span>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- current task -->
+<section class="p-3">
+    <div class="container">
+        <div class="row">
+            <div class="col-9">
+                <div class="card">
+                    <div class="card-header bg-secondary ">
+                        <span>Current Task</span>
+                    </div>
+                    <div class="card-body bg-light">
+                        <table class="table  table-hover">
+                            <thead class="bg-danger text-white">
+                            <tr>
+                                <th>sno</th>
+                                <th>employee</th>
+                                <th>email</th>
+                                <th>task name</th>
+                                <th>level</th>
+                                <th>category</th>
+                                <th>detail</th>
+                            </tr>
+                            </thead>
+
+                            <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>rajan</td>
+                                <td>rajan@gmail.com</td>
+                                <td>automation</td>
+                                <td>medium</td>
+                                <td>development</td>
+                                <td><a href="#" class="btn btn-outline-primary btn-sm">detail</a></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>rajan</td>
+                                <td>rajan@gmail.com</td>
+                                <td>automation</td>
+                                <td>medium</td>
+                                <td>development</td>
+                                <td><a href="#" class="btn btn-outline-primary btn-sm">detail</a></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>rajan</td>
+                                <td>rajan@gmail.com</td>
+                                <td>automation</td>
+                                <td>medium</td>
+                                <td>development</td>
+                                <td><a href="#" class="btn btn-outline-primary btn-sm">detail</a></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>rajan</td>
+                                <td>rajan@gmail.com</td>
+                                <td>automation</td>
+                                <td>medium</td>
+                                <td>development</td>
+                                <td><a href="#" class="btn btn-outline-primary btn-sm">detail</a></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>rajan</td>
+                                <td>rajan@gmail.com</td>
+                                <td>automation</td>
+                                <td>medium</td>
+                                <td>development</td>
+                                <td><a href="#" class="btn btn-outline-primary btn-sm">detail</a></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>rajan</td>
+                                <td>rajan@gmail.com</td>
+                                <td>automation</td>
+                                <td>medium</td>
+                                <td>development</td>
+                                <td><a href="#" class="btn btn-outline-primary btn-sm">detail</a></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>rajan</td>
+                                <td>rajan@gmail.com</td>
+                                <td>automation</td>
+                                <td>medium</td>
+                                <td>development</td>
+                                <td><a href="#" class="btn btn-outline-primary btn-sm">detail</a></td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>rajan</td>
+                                <td>rajan@gmail.com</td>
+                                <td>automation</td>
+                                <td>medium</td>
+                                <td>development</td>
+                                <td><a href="#" class="btn btn-outline-primary btn-sm">detail</a></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+             <div class="card text-center">
+                 <div class="card-header bg-primary text-white">
+                     <div class="row align-items-center">
+                         <div class="col">
+                             <i class="fa fa-address-card fa-4x"></i>
+                         </div>
+                         <div class="col">
+                             <span class="display-3">08</span><br>
+                             <span> task </span>
+                         </div>
+                     </div>
+                 </div>
+                 <div class="card-footer">
+                     <span>View Details</span>
+                 </div>
+             </div>
+                <div class="card text-center mt-3">
+                    <div class="card-header bg-success text-white">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <i class="fa fa-address-card fa-4x"></i>
+                            </div>
+                            <div class="col">
+                                <span class="display-3">08</span><br>
+                                <span> category </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span>View Details</span>
+                    </div>
+                </div>
+                <div class="card text-center mt-3">
+                    <div class="card-header bg-warning text-white">
+                        <div class="row align-items-center">
+                            <div class="col">
+                                <i class="fa fa-address-card fa-4x"></i>
+                            </div>
+                            <div class="col">
+                                <span class="display-3">08</span><br>
+                                <span> employee </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <span>View Details</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Main Footer -->
+<footer class="p-3 bg-dark text-white text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <h3>Copyright &copy; 2019, UiBrains.com</h3>
+                <h6>All Rights Reserved</h6>
+                <h6>Developed & Maintained by
+                    <a class="text-warning" href="https://github.com/thenaveensaggam" target="_blank">
+                        <i class="fa fa-users"></i> UiBrains.com
+                    </a>
+                </h6>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<!-- BODY ENDS -->
+<script src="../../bootstrap/js/jquery-3.3.1.min.js"></script>
+<script src="../../bootstrap/js/popper.min.js"></script>
+<script src="../../bootstrap/js/bootstrap.min.js"></script>
+<script src="../../bootstrap/js/mdb.min.js"></script>
+<script src="https://cdn.ckeditor.com/4.8.0/standard/ckeditor.js"></script>
+<script>
+    CKEDITOR.replace( 'editor1' );
+</script>
+</body>
+</html>
